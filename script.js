@@ -1,4 +1,3 @@
-
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -19,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (!quantityPattern.test(quantityText)) {
             error.textContent =
-                "Ошибка: введите целое положительное число.";
+                "Ошибка: введите целое положительное число, например 3.";
             quantity.focus();
             return;
         }
@@ -28,8 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
         var price = parseInt(product.value, 10);
         var total = amount * price;
 
-        result.textContent =
-            "Стоимость заказа: " + total + " руб.";
+        result.textContent = "Стоимость заказа: " + total + " руб.";
     });
 });
-```
